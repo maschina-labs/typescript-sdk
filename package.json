@@ -1,0 +1,42 @@
+{
+  "name": "maschina-sdk",
+  "version": "0.1.0",
+  "description": "Official TypeScript/JavaScript SDK for the Maschina API",
+  "author": "Maschina Labs <sdk@maschina.ai>",
+  "license": "Apache-2.0",
+  "homepage": "https://maschina.ai",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maschina-labs/sdk-typescript.git"
+  },
+  "bugs": {
+    "url": "https://github.com/maschina-labs/sdk-typescript/issues"
+  },
+  "keywords": ["maschina", "ai", "agents", "autonomous", "sdk", "typescript", "javascript"],
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": ["dist", "src", "README.md", "LICENSE", "CHANGELOG.md"],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "typescript": "^5",
+    "vitest": "^4"
+  }
+}
